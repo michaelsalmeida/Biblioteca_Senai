@@ -205,7 +205,7 @@ def grafico_geral_atividade(year, month, ja):
 
                 usar_computador.append(frequencia[0])
 
-                comando3 = "select count(pk_estudos) from mesa_estudos where data_estudos = %s;"
+                comando3 = "select count(pk_estudos) from mesa_estudos where data_estudo = %s;"
 
                 pen.execute(comando3, dataa)
 
