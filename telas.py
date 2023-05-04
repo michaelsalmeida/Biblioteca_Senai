@@ -197,38 +197,38 @@ def tela_cadastro(matricula):
 
     # Cria o campo de entrada para o nome
     nome_label = ttk.Label(janela, text="NOME:", font=('Arial', 20))
-    nome_label.place(x=450, y=150)
-    nome_entry = ttk.Entry(janela, width=100)
-    nome_entry.place(x=680, y=157)
+    nome_label.place(x=250, y=150)
+    nome_entry = ttk.Entry(janela, width=30, font=30)
+    nome_entry.place(x=380, y=157)
 
     # Cria o campo dropdown para escolha do curso
     curso_label = ttk.Label(janela, text="CURSO:", font=('Arial', 20))
-    curso_label.place(x=450, y=250)
+    curso_label.place(x=250, y=250)
     curso_var = tk.StringVar()
     curso_dropdown = ttk.Combobox(janela, textvariable=curso_var, width=50)
     curso_dropdown["values"] = ["Técnico em Desenvolvimento de Sistema", "Técnico em Qualidade", "Técnico em Mecânica de Precisão", "Técnico em Redes de Computadores", "Tecnólogo em Mecânica de Precisão" , "Assistente Técnico de Vendas"]
-    curso_dropdown.place(x=680, y=257)
+    curso_dropdown.place(x=380, y=257)
 
     # Cria o campo dropdown para escolha do número
     numero_label = ttk.Label(janela, text="TURMA:", font=('Arial', 20))
-    numero_label.place(x=450, y=350)
+    numero_label.place(x=250, y=350)
     numero_var = tk.StringVar()
     numero_dropdown = ttk.Combobox(janela, textvariable=numero_var)
     numero_dropdown["values"] = ['3DM', '1DT', '2DT', '3DN','2QC', '1QE', '3QE','1MA', '2MA', '3MA', '4MA', '1MC', '3MC', '2ME', '4ME', '2RM', '3TE', '5TE', 'ATV M1', 'ATV MA', 'ATV T2']
-    numero_dropdown.place(x=680, y=357)
+    numero_dropdown.place(x=380, y=357)
 
     fazer_label = ttk.Label(janela, text='VEIO PARA: ', font=('Arial', 20))
-    fazer_label.place(x=450, y=450)
+    fazer_label.place(x=250, y=450)
     fazer_var = tk.StringVar()
     fazer_dropdown = ttk.Combobox(janela, textvariable=fazer_var, width=50)
     fazer_dropdown["values"] = ["MESA DE ESTUDOS/LEITURA", "USAR O COMPUTADOR"]
-    fazer_dropdown.place(x=680, y=457)
+    fazer_dropdown.place(x=420, y=457)
 
     enviar_button = ttk.Button(janela, text="ENVIAR", command= lambda: cadastrar(matricula, nome_entry.get().strip(), curso_var.get(), numero_var.get(), fazer_var.get(), janela), padding=25)
-    enviar_button.place(x=700, y=650)
+    enviar_button.place(x=500, y=550)
 
     enviar_button = ttk.Button(janela, text="VOLTAR", command=lambda: fechar(janela), padding=25)
-    enviar_button.place(x=700, y=750)
+    enviar_button.place(x=500, y=650)
 
     # Inicia o loop principal da janela
     janela.mainloop()
